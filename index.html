@@ -16,7 +16,7 @@ html{
 .hero{
     padding-top:50px;
     background-image: url("./image/imag1.png");
-    height: 100vh;
+    min-height: 100vh;
     background-color:rgb(32, 32, 32);
     background-repeat: no-repeat;
     background-position: center;
@@ -159,7 +159,8 @@ html{
 .card img{
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #1c1c1c;
 }
 
 .card h3{
@@ -253,6 +254,11 @@ html{
 .copyright{
     font-size:15px;
     color:#999;
+}.developer{
+    margin-top:15px;
+    font-size:16px;
+    color:silver;
+    letter-spacing:1px;
 }
     </style>
 </head>
@@ -409,6 +415,9 @@ html{
 
     <p class="copyright">
         © 2026 Scent Story. All Rights Reserved.
+    </p>
+    <p class="developer">
+        Designed & Developed by <strong>Jayasree</strong>🤍
     </p>
 
 </div>
