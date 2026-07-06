@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scent Story</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior:auto;
+}
+.hero{
+    padding-top:50px;
+    background-image: url("./image/imag1.png");
+    height: 100vh;
+    background-color:rgb(32, 32, 32);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+}
+.hero h1{
+    color: whitesmoke;
+    font-size: 50px;
+    font-family:Georgia;
+    letter-spacing: 5px;
+    
+}
+.hero p{
+    color: whitesmoke;
+    font-size: 23px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+.hero button{
+    height: 35px;
+    width: 100px;
+    background-color:silver;
+    border:2px solid black;
+    border-radius: 35px;
+}.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}.navbar a{
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: gold;
+}
+.brand img{
+    width: 180px;
+    background-repeat: no-repeat;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about{
+    padding: 60px;
+    background-color:black;
+    text-align: center;
+    color: silver;
+}
+.about h2{
+    margin-bottom: 20px;
+    letter-spacing:2px ;
+    color:#d4af37;
+    font-size: 40px;
+}
+.about p{
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height:1.8; ;
+    color:silver ;
+}
+.about ul{
+    font-size: 20px;
+    list-style: none;
+}.about h3{
+    font-size: 28px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}.collection{
+    padding:60px 80px;
+    background-color:black;
+    text-align:center;
+}
+.parallax1{
+    min-height:900px;
+    background-color: black;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.parallax1 h2{
+    color:white;
+    font-size:55px;
+    letter-spacing:6px;
+    text-shadow:2px 2px 10px black;
+}.collection{
+    padding:80px;
+    background:black;
+    text-align:center;
+}
+
+.collection h2{
+    font-size:40px;
+    margin-bottom:40px;
+    color: #d4af37;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card{
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #d4af37;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3{
+    color: #d4af37;
+    padding: 15px;
+    font-size: 20px;
+}
+
+@media (max-width:992px){
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:576px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+.about img{
+    height: auto;
+    width: 100%;
+    max-width: 750px;
+}
+.b-1{background-image: url("./image/IMG_20260705_171200.png");}
+.b-4{background-image: url(./image/imag1.png);}
+.b-2{ background-image: url(./image/WhatsApp\ Image\ 2026-07-05\ at\ 10.45.08\ PM.jpeg);}
+.b-3{ background-image: url("./image/IMG_20260705_171223.png");}
+.help{
+    background-color: black;
+    text-align: center;
+    padding:80px;
+}
+.help h2{
+    font-size: 50px;
+    color: #d4af37;
+}
+.help p{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}.footer{
+    background:#111;
+    color:silver;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.footer h2{
+    color:#d4af37;
+    font-size:35px;
+    letter-spacing:4px;
+    margin-bottom:15px;
+}
+
+.footer .tagline{
+    font-size:18px;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+.footer .thanks{
+    max-width:700px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+.social-links{
+    margin-bottom:25px;
+}
+
+.social-links a{
+    color:silver;
+    text-decoration:none;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    color:#d4af37;
+}
+
+.footer hr{
+    border:0;
+    border-top:1px solid #444;
+    margin:25px auto;
+    width:80%;
+}
+
+.copyright{
+    font-size:15px;
+    color:#999;
+}
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="#hero">Home</a>
+    <a href="#about">About us</a>
+    <a href="#collection">Collections</a>
+    <a href="#contact">Contact us</a>
+</div>
+    <div class="hero" id="hero">
+        <div class="brand">
+            <img src="./image/logo.png" alt="">
+        <h1>SCENT STORY</h1><br></div>
+            <p>---Every Fragrance Tells a Story---</p><br>
+                <a href="#collection">
+                    <button>Discover Collection</button><br>
+                </a>
+</div>
+
+<div class="parallax1 b-1">
+    <h2>Luxury in Every Drop</h2>
+</div>
+
+<div class="about" id="about">
+    <h2> 🌸ABOUT SCENT STORY</h2>
+        <p>At Scent Story, every fragrance is crafted to express your 
+            personality with elegance and confidence. A perfect scent 
+            enhances your style, leaves a lasting impression, and becomes
+            a part of your story. Whether it's a professional meeting, a 
+            romantic evening, or a special celebration, our exclusive
+            collection offers the perfect fragrance for every moment.</p>
+    <img src="./image/all collections.jpeg" alt="">
+    <h3>🌟 Why Choose Scent Story?</h3>
+        <ul>
+            <li>✨ Customizable Fragrances – Create a signature scent that reflects your personality and preferences.</li>
+            <li>⭐ 100+ Happy Customers – Loved and trusted by customers for our quality and unique fragrances.</li>
+            <li>🌿 Premium Quality – Made with carefully selected ingredients for a rich and long-lasting scent.</li>
+            <li>💰 Affordable Luxury – Experience premium perfumes without paying premium prices</li>
+            <li>🎁 Perfect Gift Choice – Surprise your loved ones with elegant fragrances for birthdays, anniversaries, weddings, and other special occasions.</li>
+            <li>🌸 Wide Collection – Choose from floral, woody, fruity, fresh, and many more fragrances designed for every mood and occasion.</li>
+        </ul>
+</div>
+
+<div class="parallax1 b-2">
+    <h2>Crafted to Be Remenbered</h2>
+</div>
+
+<div class="collection" id="collection">
+
+    <h2>Our Collections</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="./image/floral bloom.jpeg" alt="">
+            <h3>Floral Bloom</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/woody essence.jpeg" alt="">
+            <h3>Woody Essence</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/citrus splash.jpeg" alt="">
+            <h3>Citrus Splash</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/royal oud.jpeg" alt="">
+            <h3>Royal Oud</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/golden amber.jpeg" alt="">
+            <h3>Golden Amber</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/vanilla velvet.jpeg" alt="">
+            <h3>Vanilla Velvet</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/ocean breeze.jpeg" alt="">
+            <h3>Ocean Breeze</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image/midnight musk.jpeg" alt="">
+            <h3>Midnight Musk</h3>
+        </div>
+    </div>
+</div>
+
+<div class="parallax1 b-3">
+    <h2>Wear Your Signature</h2>
+</div>
+
+<div class="help" id="contact">
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p class="contact-text">
+        We'd love to be a part of your fragrance journey. Whether you have a
+        question, need a personalized fragrance, or simply want to know more 
+        about our collections, our team is always here to help.
+    </p>
+
+    <div class="contact-details">
+
+        <p>📍 Chennai, Tamil Nadu, India</p>
+
+        <p>📞 +91 98765 43210</p>
+
+        <p>📧 hello@scentstory.com</p>
+
+        <p>🌐 www.scentstory.com</p>
+
+        <p>🕒 Monday - Saturday | 9:00 AM - 7:00 PM</p>
+
+    </div>
+    <div class="query-box">
+        <h2>Need a Custom Fragrance?</h2>
+            <p>Tell us your requirements, and our team will help you find or
+            create the perfect fragrance just for you.</p>
+                <a href="#query">Stary Your Query</a>
+</div>
+</section>
+<div class="parallax1 b-4">
+    <h2>Leave a Last Impression</h2>
+</div>
+<div class="footer">
+
+    <h2>SCENT STORY</h2>
+
+    <p class="tagline">
+        Every Fragrance Tells a Story.
+    </p>
+
+    <p class="thanks">
+        Thank you for visiting Scent Story. We look forward to helping you discover a fragrance that truly tells your story.
+    </p>
+
+    <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">X</a>
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Scent Story. All Rights Reserved.
+    </p>
+
+</div>
+</body>
+</html>
